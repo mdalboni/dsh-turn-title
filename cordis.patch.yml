@@ -1,0 +1,7 @@
+# Disable early prompt-only auto-titler so turn-1 takes over after assistant response
+- id: session-title-llm
+  disabled: true
+
+- insert:
+    - id: dsh-turn-title
+      name: dsh-turn-title

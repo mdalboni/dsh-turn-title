@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Título por Turno",
+    "description": "Gera o título automaticamente após o turno 1 (mensagem + resposta) e adiciona um botão de atualizar título no chat."
+  }
+}

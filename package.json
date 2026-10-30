@@ -1,0 +1,62 @@
+{
+  "name": "dsh-turn-title",
+  "version": "1.0.0",
+  "description": "Auto-title conversation after first exchange + button to update title in chat",
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "deepseek-harness",
+    "session-title",
+    "conversation-title"
+  ],
+  "author": "Maxwell Dalboni <maxwell@dalboni.land>",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdalboni/dsh-turn-title.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mdalboni/dsh-turn-title/issues"
+  },
+  "homepage": "https://github.com/mdalboni/dsh-turn-title#readme",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./icon": "./icon.svg",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "README.md",
+    "README.pt-BR.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.1-rc.3"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.1-rc.3"
+  },
+  "scripts": {
+    "test": "node --test test/index.test.js"
+  }
+}

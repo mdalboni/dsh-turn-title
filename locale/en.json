@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Turn Title",
+    "description": "Auto-titles conversation after turn 1 (message + response) and adds an update button in the chat area."
+  }
+}
